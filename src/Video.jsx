@@ -1,11 +1,15 @@
 import React from "react";
 import videospace from "./video/video.mp4";
+import './css/video.scss';
 
 export default function Video() {
     return (
-        <div className="video">
-            <video src={videospace} width="1150" height="575" autoplay="true"/>
-        </div>
+        <div>
+        
+            <video src={videospace} autoplay="true" className="video"></video>
+        
+            </div>
+     
 
     );
 
