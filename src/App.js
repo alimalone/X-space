@@ -1,15 +1,15 @@
-import Video from "./components/Video";
+import Homepage from "./pages/Homepage";
 import "./App.scss";
-import { Switch, Route } from "react-router-dom";
-import Main from "./components/Main";
+//import { Switch, Route } from "react-router-dom";
+//import Main from "./components/Main";
 
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/main" component={Main}></Route>
-        <Route path="/" component={Video}></Route>
-      </Switch>
+    
+        
+      <Homepage/>
+      
     </div>
   );
 }

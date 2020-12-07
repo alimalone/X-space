@@ -1,0 +1,32 @@
+.link {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 80vw;
+  height: 95vh;
+  animation: fadein 40s;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 2;
+    }
+  }
+
+  .Main {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: center;
+    width: 50%;
+    height: 40%;
+    color: white;
+    font-family: "Saira Extra Condensed", sans-serif;
+    font-size: 60px;
+  }
+}

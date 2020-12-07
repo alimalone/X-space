@@ -1,44 +1,32 @@
 import React, { useState, useEffect } from "react";
 import HttpClient from "../HttpClient";
+import "../css/Main.scss";
 
-
-const Main = () => {
+export default function Main() {
   const [apod, setApod] = useState({});
-  
 
   useEffect(() => {
-    HttpClient.getApod().then(apodData => {
-      setApod(apodData.data)
-    })
-  }, [])
+    HttpClient.getApod().then((apodData) => {
+      setApod(apodData.data);
+    });
+  }, []);
 
   return (
- 
-    <div style={{ maxWidth: 900, padding: 30 }}>
+    <div className="main">
       
-      <h1>NASA API</h1>
-      <h2>Astronomy Picture of the Day</h2>
+      
       {apod && (
-        <article>
+        <div>
           <header>
             {apod.title} - <i>{apod.date}</i>
           </header>
-          <img src={apod.url} alt="APOD" width="800" height="auto" />
+          <img src={apod.url} alt="APOD" width="673" height="auto" />
           <p>{apod.explanation}</p>
-          <pre
-            style={{
-              overflowX: "auto",
-              whiteSpace: "pre-wrap",
-              wordWrap: "break-word",
-            }}
-          >
-            <hr />
-            {JSON.stringify(apod, null, 2)}
-          </pre>
-        </article>
+
+          <hr />
+          {JSON.stringify(apod, null, 2)}
+        </div>
       )}
     </div>
-  )
+  );
 }
-
-export default Main
