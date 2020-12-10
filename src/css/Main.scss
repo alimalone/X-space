@@ -4,36 +4,66 @@
   position: absolute;
   width: 50%;
   height: auto;
-  margin-top: 450px;
+  margin-top: 430px;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.481);
+  background-color: rgba(248, 249, 250, 0.371);
   border-radius: 5px;
+  animation: fadein 15s;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 2;
+    }
+  }
 
   .imgHead {
     display: flex;
-
     padding: 2em;
 
     .info {
-        button {
-            border-radius: 100px;
-        }
+      button {
+        width: 20px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: transparent;
+        text-align: center;
+        color: rgb(7, 55, 128);
+        margin-left: 2px;
+        cursor: pointer;
+        border: none;
+        padding: 6px 0 6px 0;
+        box-shadow: 3px 3px 12px rgb(60, 59, 59);
+      }
+      button:hover {
+        background-color: #fffdfd;
+      }
+
       p {
-        color: white;
+        color: rgba(255, 255, 255, 0.816);
         margin-left: 10px;
         position: absolute;
         width: 800px;
-        animation: fadein 1s;
         width: 300px;
         background-color: black;
-      @keyframes fadein {
-        from {
-          opacity: 0;
+        animation: fadein 1s;
+        padding: 1em;
+        font-size: 13px;
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
-        to {
-          opacity: 1;
+        hr {
+          color: rgb(7, 55, 128);
         }
-      }
       }
     }
   }

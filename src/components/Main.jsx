@@ -28,13 +28,15 @@ export default function Main() {
                 minus(!add);
               }}
             >
-              {add ? "*" : "-"}
+              {add ? "+" : "/"}
             </button>
             {open && (
+              <div>
               <p>
-                {apod.title} - <i>{apod.date}</i>
-                {apod.explanation}
-              </p>
+              <i>{apod.title} - {apod.date}</i>
+                <hr></hr>
+                {apod.explanation}</p>
+              </div>
             )}</div>
           
         </div>
