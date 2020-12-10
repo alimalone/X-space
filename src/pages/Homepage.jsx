@@ -8,10 +8,10 @@ import Main from "../components/Main";
 export default function Homepage() {
   return (
     <div className="homePage">
-     
+    
       
       <Video />
-     
+      
       
       <Button />
       

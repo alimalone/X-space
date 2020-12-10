@@ -4,8 +4,10 @@ import "../css/video.scss";
 
 export default function Video() {
   return (
-    <div className="video">
-  <video src={videospace} autoplay="true" className="video"></video>
-  </div>
+    <header className="videoTop">
+      <div className="video">
+        <video src={videospace} autoplay="true" className="video"></video>
+      </div>
+    </header>
   );
 }

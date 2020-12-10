@@ -1,9 +1,40 @@
 .main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 50%;
+  height: auto;
+  margin-top: 450px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.481);
+  border-radius: 5px;
+
+  .imgHead {
     display: flex;
-   flex-direction: column;
-   
-    width: 50%;
-    height: auto;
-    margin-top: 20px;
-    
+
+    padding: 2em;
+
+    .info {
+        button {
+            border-radius: 100px;
+        }
+      p {
+        color: white;
+        margin-left: 10px;
+        position: absolute;
+        width: 800px;
+        animation: fadein 1s;
+        width: 300px;
+        background-color: black;
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      }
+    }
+  }
 }

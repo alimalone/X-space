@@ -4,6 +4,8 @@ import "../css/Main.scss";
 
 export default function Main() {
   const [apod, setApod] = useState({});
+  const [open, setOpen] = useState(false);
+  const [add, minus] = useState(true);
 
   useEffect(() => {
     HttpClient.getApod().then((apodData) => {
@@ -13,20 +15,33 @@ export default function Main() {
 
   return (
     <div className="main">
-      
-      
       {apod && (
-        <div>
-          <header>
-            {apod.title} - <i>{apod.date}</i>
-          </header>
-          <img src={apod.url} alt="APOD" width="673" height="auto" />
-          <p>{apod.explanation}</p>
+        <div className="imgHead">
+          
+          <img src={apod.url} alt="APOD" width="500" height="auto" />
 
-          <hr />
-          {JSON.stringify(apod, null, 2)}
+          <div className="info">
+            <button
+              className="add"
+              onClick={() => {
+                setOpen(!open);
+                minus(!add);
+              }}
+            >
+              {add ? "*" : "-"}
+            </button>
+            {open && (
+              <p>
+                {apod.title} - <i>{apod.date}</i>
+                {apod.explanation}
+              </p>
+            )}</div>
+          
         </div>
       )}
     </div>
   );
 }
+
+/*<hr />
+{JSON.stringify(apod, null, 2)}*/
